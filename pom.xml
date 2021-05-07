@@ -12,7 +12,10 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
-
+    <modules>
+        <module>core</module>
+        <module>common</module>
+    </modules>
     <name>flow-gateway-parent</name>
 
     <repositories>

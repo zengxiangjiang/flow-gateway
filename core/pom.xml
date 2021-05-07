@@ -3,21 +3,21 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.4.5</version>
-        <relativePath/> <!-- lookup parent from repository -->
+        <groupId>flow-gateway-core</groupId>
+        <artifactId>flow-gateway-parent</artifactId>
+        <version>0.0.1.RELEASE</version>
     </parent>
     <groupId>com.cd.gateway</groupId>
     <artifactId>core</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>core</name>
-    <description>Demo project for Spring Boot</description>
     <properties>
         <java.version>16</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <netty_version>4.1.45.Final</netty_version>
+        <springboot.version>2.4.5</springboot.version>
+        <common.version>0.0.1.RELEASE</common.version>
         <start-class>com.cd.gateway.core.CoreApplication</start-class>
     </properties>
 
@@ -27,11 +27,30 @@
             <artifactId>netty-all</artifactId>
             <version>${netty_version}</version>
         </dependency>
-
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot</artifactId>
+            <version>${springboot.version}</version>
+        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
+            <version>${springboot.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-autoconfigure</artifactId>
+            <version>${springboot.version}</version>
+        </dependency>
+        <dependency>
+            <artifactId>flow-gateway-parent</artifactId>
+            <groupId>flow-gateway-core</groupId>
+            <version>${common.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.cd.gateway</groupId>
+            <artifactId>common</artifactId>
+            <version>${common.version}</version>
         </dependency>
 
     </dependencies>

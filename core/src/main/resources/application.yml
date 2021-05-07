@@ -1,1 +1,6 @@
-
+netty:
+  work-gorup:
+    size: 500
+  backlog: 100
+  port: 9090
+  maxContentLength: 2000
